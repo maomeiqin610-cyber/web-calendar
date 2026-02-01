@@ -25,5 +25,10 @@
 - **API**: `npm run deploy:api`
 - **Frontend**: Cloudflare Pagesで `public/` を公開
 
+## Tests
+- 単体テスト: `npm run test:unit`
+- 機能テスト(Playwright): `npm run test:e2e`
+- 初回のみ `npx playwright install` が必要
+
 ## Notes
 - APIのベースURLを変えたい場合は `public/app.js` の `API_BASE` を変更。

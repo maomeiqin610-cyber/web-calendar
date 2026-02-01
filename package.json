@@ -4,10 +4,16 @@
   "type": "module",
   "scripts": {
     "dev:api": "wrangler dev",
-    "deploy:api": "wrangler deploy"
+    "deploy:api": "wrangler deploy",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test": "npm run test:unit && npm run test:e2e"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240214.0",
+    "@playwright/test": "^1.42.1",
+    "miniflare": "^3.20240214.0",
+    "vitest": "^1.3.1",
     "wrangler": "^3.60.0"
   }
 }
