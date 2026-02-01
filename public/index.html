@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Calendar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orbs" aria-hidden="true"></div>
+    <header class="top">
+      <div class="brand">
+        <div class="logo">WC</div>
+        <div>
+          <p class="eyebrow">Personal Practice</p>
+          <h1>Web Calendar</h1>
+        </div>
+      </div>
+      <div class="month-nav">
+        <button id="prevMonth" aria-label="前の月">←</button>
+        <div>
+          <p class="eyebrow">Selected Month</p>
+          <h2 id="monthLabel">2026年2月</h2>
+        </div>
+        <button id="nextMonth" aria-label="次の月">→</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="calendar">
+        <div class="weekdays" id="weekdays"></div>
+        <div class="grid" id="calendarGrid"></div>
+      </section>
+
+      <aside class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Selected Day</p>
+            <h3 id="selectedLabel">--</h3>
+          </div>
+          <button id="addEvent" class="primary">+ 予定</button>
+        </div>
+        <div id="eventList" class="event-list"></div>
+      </aside>
+    </main>
+
+    <dialog id="eventDialog" class="dialog">
+      <form id="eventForm" method="dialog">
+        <header>
+          <h3 id="dialogTitle">予定を追加</h3>
+          <button type="button" id="closeDialog" class="ghost">閉じる</button>
+        </header>
+        <label>
+          タイトル
+          <input name="title" type="text" required maxlength="60" />
+        </label>
+        <div class="two">
+          <label>
+            日付
+            <input name="date" type="date" required />
+          </label>
+          <label>
+            開始時刻
+            <input name="start" type="time" required />
+          </label>
+          <label>
+            終了時刻
+            <input name="end" type="time" required />
+          </label>
+        </div>
+        <label>
+          メモ
+          <textarea name="memo" rows="3" maxlength="200"></textarea>
+        </label>
+        <div class="actions">
+          <button type="submit" class="primary">保存</button>
+          <button type="button" id="deleteEvent" class="danger hidden">削除</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

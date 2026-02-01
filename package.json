@@ -1,0 +1,13 @@
+{
+  "name": "web-calendar",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:api": "wrangler dev",
+    "deploy:api": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240214.0",
+    "wrangler": "^3.60.0"
+  }
+}
