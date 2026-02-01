@@ -1,0 +1,9 @@
+name = "web-calendar-api"
+main = "src/worker.ts"
+compatibility_date = "2026-02-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "web-calendar"
+database_id = "<set-your-d1-id>"
+migrations_dir = "migrations"
